@@ -1,4 +1,5 @@
 require "is_published/version"
+require "is_published/scopes"
 
 module IsPublished
   class Error < StandardError; end
