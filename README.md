@@ -42,7 +42,10 @@ When database is ready, you can start with gem setup.
 Add code below to any Ruby class to add scope .where(published: true) 
 
 ```ruby
+class Post < ApplicationRecord
+  # Here you extend your class with gem
   extend IsPublished::Scopes
+end
 ```
 
 Then you can use it in the controller like every other scope 
