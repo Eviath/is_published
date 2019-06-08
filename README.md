@@ -48,12 +48,14 @@ class Post < ApplicationRecord
 end
 ```
 
-Then you can use it in the controller like every other scope 
+Then you can use it like every other scope 
 
 ```ruby
 Post.published 
+#=>  => #<Post id: 1, title: "Published post", user_id: 1, published: true, created_at: "2019-06-07 14:42:22", updated_at: "2019-06-07 16:51:07">
 
-#=>  => #<Post id: 16, title: "Published post", user_id: 1, published: true, created_at: "2019-06-07 14:42:22", updated_at: "2019-06-07 16:51:07">
+Post.find(1).published?
+#=> true
 ```
 
 ## Development
