@@ -3,7 +3,6 @@ RSpec.describe IsPublished do
     expect(IsPublished::VERSION).not_to be nil
   end
 
-
   before :each do
     ActiveRecord::Base.establish_connection(
       adapter: 'sqlite3',

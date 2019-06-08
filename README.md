@@ -18,8 +18,56 @@ Or install it manually on local machine
 
     $ gem install is_published
 
-## Usage
-Before all, class you want to extend with this gem, needs to have column 'published' in the database.
+## Model and migrations
+##### Before all. Class you want to extend with this gem, needs to have column 'published' in the database.
+
+###-- If you dont have created migrations and model
+
+Gem comes with migrations and model generator, you can create one with this command:
+
+```ruby
+rails g is_published:install [MODEL NAME]
+```
+
+For example:
+
+    rails g is_published:install Article  
+
+which will create model and migrations with provided name.
+
+Migration will look like this
+```ruby
+class CreateArticles < ActiveRecord::Migration
+  def change
+    create_table :articles do |t|
+      t.string :title
+      t.string :body
+      t.boolean :published, default: false
+      t.timestamps
+    end
+  end
+end
+```
+Model class comes with already extended gem scope, its going to look like this one
+
+```ruby
+class Article < ApplicationRecord
+  extend IsPublished::Scopes
+end
+```
+
+If needed, you can customize migrations before running them.
+
+After running generator command, run migration.
+
+    rails db:migrate
+    
+####And you are good to go! Proceed to gem usage information!
+
+
+
+*** 
+## -- If you have already model and migrations
 
 If your model table already exists, you can create migration to add published column like this:
 
@@ -49,8 +97,10 @@ class Post < ApplicationRecord
 end
 ```
 
-Then you can use it like every other scope 
+Now you are done.
 
+## Gem usage
+After you are done with migrations and model setup, you can use published scope like this.
 ```ruby
 Post.published 
 #=>  => #<Post id: 1, title: "Published post", user_id: 1, published: true, created_at: "2019-06-07 14:42:22", updated_at: "2019-06-07 16:51:07">
