@@ -18,6 +18,26 @@ And then execute:
 
 
 ## Usage
+Before all, class you want to extend with this gem, needs to have column 'published' in the database.
+
+If your model table already exists, you can create migration to add published column like this:
+
+```ruby
+rails g migration AddPublishedColumnToPosts published:boolean
+```
+
+Generated migration should now look like this:
+```ruby
+class AddPublishedColumnToPosts < ActiveRecord::Migration[6.0]
+  def change
+    add_column :posts, :published, :boolean, default: false
+  end
+end
+```
+Default value of 'published' should be 'false', rails generator doesnt allow that in generator command, you have to edit migration by yourself.
+
+When database is ready, you can start with gem setup.
+***
 
 Add code below to any Ruby class to add scope .where(published: true) 
 
