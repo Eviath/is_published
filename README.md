@@ -19,9 +19,9 @@ Or install it manually on local machine
     $ gem install is_published
 
 ## Model and migrations
-##### Before all. Class you want to extend with this gem, needs to have column 'published' in the database.
+#### Before all. Class you want to extend with this gem, needs to have column 'published' in the database.
 
-###-- If you dont have created migrations and model
+### -- If you dont have created migrations and model
 
 Gem comes with migrations and model generator, you can create one with this command:
 
@@ -62,7 +62,7 @@ After running generator command, run migration.
 
     rails db:migrate
     
-####And you are good to go! Proceed to gem usage information!
+#### And you are good to go! Proceed to gem usage information!
 
 
 
@@ -99,7 +99,7 @@ end
 
 Now you are done.
 
-## Gem usage
+## Scope usage
 After you are done with migrations and model setup, you can use published scope like this.
 ```ruby
 Post.published 
