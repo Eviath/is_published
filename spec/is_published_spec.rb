@@ -11,7 +11,7 @@ RSpec.describe IsPublished do
     )
     ActiveRecord::Schema.define do
       create_table :posts, force: true do |t|
-        t.string :published, default: false
+        t.boolean :published, default: false
       end
     end
   end

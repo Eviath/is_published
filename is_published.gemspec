@@ -10,10 +10,10 @@ Gem::Specification.new do |spec|
   spec.email         = ["eviathos@gmail.com"]
 
   spec.summary       = "is_published rubygem adds .published scope to ruby class"
-  spec.description   = "is_published rubygem adds .published scope to ruby class, literally description..."
+  spec.description   = "is_published rubygem adds .published scope to ruby class, more information about gem installation/usage in Github Homepage"
   spec.homepage      = "https://github.com/Eviath/is_published.git"
   spec.license       = "MIT"
-  
+
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
