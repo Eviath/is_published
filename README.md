@@ -1,4 +1,6 @@
+
 # IsPublished
+[![Gem Version](https://badge.fury.io/rb/is_published.svg)](https://badge.fury.io/rb/is_published)
 
 Simple RubyGem which adds scope .published to any rails model you want!
 
