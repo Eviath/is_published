@@ -1,21 +1,22 @@
 # IsPublished
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/is_published`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Simple RubyGem which adds scope .published to any rails model you want!
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'is_published', git: 'https://github.com/Eviath/is_published.git', :branch => 'master'
+gem 'is_published'
 ```
 
 And then execute:
 
     $ bundle
 
+Or install it manually on local machine
+
+    $ gem install is_published
 
 ## Usage
 Before all, class you want to extend with this gem, needs to have column 'published' in the database.
