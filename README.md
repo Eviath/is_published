@@ -9,20 +9,29 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'is_published'
+gem 'is_published', git: 'https://github.com/Eviath/is_published.git', :branch => 'master'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install is_published
 
 ## Usage
 
-TODO: Write usage instructions here
+Add code below to any Ruby class to add scope .where(published: true) 
+
+```ruby
+  extend IsPublished::Scopes
+```
+
+Then you can use it in the controller like every other scope 
+
+```ruby
+Post.published 
+
+#=>  => #<Post id: 16, title: "Published post", user_id: 1, published: true, created_at: "2019-06-07 14:42:22", updated_at: "2019-06-07 16:51:07">
+```
 
 ## Development
 
